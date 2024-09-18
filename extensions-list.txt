@@ -1,0 +1,12 @@
+bradlc.vscode-tailwindcss
+dart-code.dart-code
+dart-code.flutter
+esbenp.prettier-vscode
+ms-azuretools.vscode-docker
+ms-vscode-remote.remote-containers
+ms-vscode.vscode-typescript-next
+pkief.material-icon-theme
+usernamehw.errorlens
+vue.volar
+yoavbls.pretty-ts-errors
+zhuangtongfa.material-theme
