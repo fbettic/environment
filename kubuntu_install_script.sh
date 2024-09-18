@@ -66,4 +66,22 @@ sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 systemctl --user enable docker-desktop
 systemctl --user start docker-desktop
 
+# Añadir opción de "Abrir con VS Code" para archivos en el menú contextual
+echo "Añadiendo opción de 'Abrir con VS Code' en el menú contextual..."
+mkdir -p ~/.local/share/kservices5/ServiceMenus
+
+cat <<EOF > ~/.local/share/kservices5/ServiceMenus/open_with_code.desktop
+[Desktop Entry]
+Type=Service
+Icon=code
+ServiceTypes=KonqPopupMenu/Plugin,inode/directory,mimeType/text/*
+Actions=openWithVSCode
+X-KDE-Priority=TopLevel
+
+[Desktop Action openWithVSCode]
+Name=Abrir con Visual Studio Code
+Exec=code %U
+Icon=code
+EOF
+
 echo "Instalación completada. Reinicia el equipo para aplicar los cambios."
