@@ -1,0 +1,29 @@
+{
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "editor.fontFamily": "'Cascadia Code PL', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "oneDarkPro.bold": true,
+    "oneDarkPro.vivid": true,
+    "oneDarkPro.editorTheme": "One Dark Pro Darker",
+    "workbench.iconTheme": "material-icon-theme",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabSize": 2,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "dart.flutterSdkPath": "/home/fbettic/flutter"
+}
