@@ -8,7 +8,7 @@ sudo apt install -y curl gnome-terminal apt-transport-https ca-certificates soft
 echo "Instalando Visual Studio Code..."
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
-sudo sh -c 'echo "deb [arch=arm64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
 sudo apt update
 sudo apt install -y code
@@ -31,9 +31,9 @@ nvm install --lts
 
 # Instalar Google Chrome
 echo "Instalando Google Chrome..."
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_arm64.deb
-sudo apt install -y ./google-chrome-stable_current_arm64.deb
-rm google-chrome-stable_current_arm64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install -y ./google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb
 
 # Instalar Android Studio
 echo "Instalando Android Studio..."
@@ -46,7 +46,7 @@ echo "Instalando Docker Desktop..."
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo \
-  "deb [arch=arm64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
@@ -54,8 +54,8 @@ echo \
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Descargar Docker Desktop para ARM64
-wget https://desktop.docker.com/linux/main/arm64/docker-desktop-arm64.deb -O docker-desktop.deb
+# Descargar Docker Desktop para amd64
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.22.1-amd64.deb -O docker-desktop.deb
 
 # Instalar Docker Desktop
 sudo apt install -y ./docker-desktop.deb
